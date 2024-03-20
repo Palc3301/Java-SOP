@@ -25,8 +25,8 @@ public class MemoriaManager {
         String idProcesso = process.getId();
 
         for (int i = 0; i < memoriaFisica.length; i++) {
-            if (memoriaFisica[i].equals(idProcesso)) {
-                memoriaFisica[i] = "";
+            if (memoriaFisica[i] != null && memoriaFisica[i].equals(idProcesso)) {
+                memoriaFisica[i] = null;
             }
         }
 
@@ -99,7 +99,7 @@ public class MemoriaManager {
 
         for (int i = 0; i < memoriaFisica.length; i++) {
             int j = i;
-            while (memoriaFisica[j] == null && j < memoriaFisica.length) {
+            while (j < memoriaFisica.length && memoriaFisica[j] == null) {
                 j++;
             }
             int tamanho = j - i;

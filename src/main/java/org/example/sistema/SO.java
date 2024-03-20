@@ -10,7 +10,7 @@ public class SO {
     private CpuManager cpuManager;
 
     public SO(Estrategia estrategia) {
-        this.memoriaManager = new MemoriaManager(Estrategia.BEST_FIT);
+        this.memoriaManager = new MemoriaManager(estrategia);
         this.cpuManager = new CpuManager();
     }
 
